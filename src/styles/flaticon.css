@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Flaticon";
+  src: url("/fonts/flaticon.woff") format("woff"),
+       url("/fonts/flaticon.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.flaticon {
+  font-family: "Flaticon" !important;
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+  display: inline-block;
+  text-decoration: inherit;
+  text-align: center;
+}
+
+.flaticon-presentation:before {
+  content: "\f11e";
+}
