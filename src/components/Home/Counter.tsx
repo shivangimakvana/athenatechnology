@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 
-function useCounter(target, duration) {
+function useCounter(target: number, duration: number) {
   const [count, setCount] = React.useState(0);
 
   React.useEffect(() => {
@@ -22,7 +22,15 @@ function useCounter(target, duration) {
   return count;
 }
 
-function CounterBox({ title, label, target, suffix = '+', duration }) {
+type CounterBoxProps = {
+  title: string;
+  label: string;
+  target: number;
+  suffix?: string;
+  duration: number;
+};
+
+function CounterBox({ title, label, target, suffix = '+', duration }: CounterBoxProps) {
   const count = useCounter(target, duration);
 
   return (
