@@ -6,10 +6,10 @@ import React from "react";
 
 export default function Header() {
     return (
-        <header>
+        <header className="sticky top-0 z-[1000] bg-gray-800 text-white p-4">
             <div className="bg-[#223645] h-[50px]">
                 <div className="max-w-[1200px] mx-auto flex items-center justify-between h-full px-4">
-                    <div className="flex  border-r border-l border-gray-500">
+                    <div className="flex border-r border-l border-[rgba(255,255,255,0.08)]">
                         <i className="ti ti-email" />
                         <a
                             className="no-underline text-[#fff] p-[12px] text-sm hover:underline"
@@ -18,7 +18,7 @@ export default function Header() {
                             info@athenatechnology.co.in
                         </a>
                     </div>
-                    <ul className="flex list-none border-r border-l border-gray-500">
+                    <ul className="flex list-none border-r border-l border-[rgba(255,255,255,0.08)]">
                         <li>
                             <a href="#!" aria-label="Facebook">
                                 <img src="/images/facebook.png" alt="facebook" />
@@ -37,7 +37,7 @@ export default function Header() {
                     </ul>
                 </div>
             </div>
-            <div className="max-w-[1200px] mx-auto">
+            <div className="sticky top-0 z-[1000] bg-white shadow w-full">
                 <div className="flex justify-between items-center py-4">
                     <a href="/" title="Athena Technology" rel="home">
                         <img src="/images/logo.png" alt="Athena Technology Logo" className="h-12" />

@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Image from "next/image";
 
-
 const products = [
   {
     label: "Hydrogen Gas Generator For GC",
@@ -86,35 +85,50 @@ const products = [
 export default function ProductTabs() {
   const [active, setActive] = useState(0);
   const product = products[active];
+  // Alternate: even index = image left, odd index = image right
+  const isImageLeft = active % 2 === 0;
+
   return (
-     <section className="max-w-[1200px] mx-auto">
-      <div className="flex flex-wrap">
-        <h2 className="text-3xl font-bold text-[#223645] mb-2">Our Products</h2>
-        <p className="text-[#6c7a89] border-l border-[#6c7a89] pl-4 ml-4 text-lg">
-          Athena Technology provides a huge selection of high-quality scientific equipment and lab supplies at affordable prices, together withindividualised customer service.
-        </p>
+    <section className="max-w-[1200px] mx-auto">
+      <div className="section-title style2">
+        <div className="w-1/2 pr-[50px] pb-0 relative table-cell align-bottom">
+          <h2 className="title border-r border-[#e7e7e7] text-[45px]">Our Products</h2>
+        </div>
+        <div className="table-cell align-bottom">
+          <p>
+            Athena Technology provides a huge selection of high-quality scientific equipment and lab supplies at affordable prices, together with individualised customer service.
+          </p>
+        </div>
       </div>
-      <div>{products.map((p, idx) => (
-        <button
-          key={p.label}
-          onClick={() => setActive(idx)}
-          className={`relative p-[20px] border m-[5px] transition-colors
+      <ul className="flex  p-[0px] list-none flex-wrap">
+        {products.map((p, idx) => (
+          <li key={p.label} className="m-0 p-0">
+            <button
+              type="button"
+              onClick={() => setActive(idx)}
+              className={`break-words whitespace-normal relative mx-[5px] mb-[25px] pt-[18px] px-[28px] pb-[23px] border m-[5px] transition-colors
                 ${active === idx
-              ? "bg-[#1d4783] text-[#fff] shadow-lg border-2 border-[#ef8013]"
-              : "border-[#f0f0f0] text-[#223645] hover:bg-[#1d4783] hover:text-[#fff]"}
+                  ? "bg-[#1d4783] text-[#fff] shadow-lg border-2 border-[#ef8013]"
+                  : "border-[#f0f0f0] text-[#223645] hover:bg-[#1d4783] hover:text-[#fff]"}
               `}
-          style={{
-            zIndex: active === idx ? 10 : 1,
-          }}
-        >
-          {p.label}
-          {active === idx && (
-            <span className="absolute left-1/2 -bottom-3 -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-b-8 border-l-transparent border-r-transparent border-b-[#ef8013] mt-[35px]" />
-          )}
-        </button>
-      ))}</div>
-      <div className='flex flex-wrap justify-center p-4 bg-gray-100'>
-        <div className="w-full max-w-[500px]">
+              style={{
+                zIndex: active === idx ? 10 : 1,
+              }}
+            >
+              {p.label}
+              {active === idx && (
+                <span className="absolute left-1/2 -bottom-3 -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-b-8 border-l-transparent border-r-transparent border-b-[#ef8013] mt-[35px]" />
+              )}
+            </button>
+          </li>
+        ))}
+      </ul>
+      <div
+        className={`flex p-[40px] bg-gray-100 items-center shadow-[0_0_7px_0_rgba(41,61,88,0.18)] ${
+          isImageLeft ? "" : "flex-row-reverse"
+        }`}
+      >
+        <div className="w-full max-w-[600px]">
           <h2 className="text-2xl md:text-3xl font-bold text-[#223645]">{product.label}</h2>
           <p className="w-full break-words whitespace-normal text-[#6c7a89]">
             {product.description}
@@ -128,18 +142,22 @@ export default function ProductTabs() {
             ))}
           </ul>
         </div>
-        <div className="w-full max-w-[400px]">
-    <Image
-      src={product.image}
-      alt={product.label}
-      width={400}
-      height={400}
-      className="w-full h-auto object-contain rounded"
-      priority
-    />
-  </div>
-
-        
+        <div className="w-full max-w-[600px] bg-[#ebf5f5] p-[15px] rounded-[6px]">
+          <Image
+            src={product.image}
+            alt={product.label}
+            width={400}
+            height={400}
+            className="w-full h-auto object-contain rounded"
+            priority
+          />
+          <a href="#" className="btn-inline ">
+            <span className="margin_bottom0">
+                <i className="ti ti-angle-right margin_left0"></i>
+                <p>icon</p>
+            </span>
+          </a>
+        </div>
       </div>
       <div className='text-center'>
         <div className="relative flex items-center justify-center gap-4">
