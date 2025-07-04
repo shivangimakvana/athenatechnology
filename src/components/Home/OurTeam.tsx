@@ -43,7 +43,7 @@ export default function OurTeamSection() {
             to the contribution and hard work of its workforce.
           </p>
         </div>
-        <div className="flex flex-wrap lg:flex-row max-w-full">
+        <div className="flex flex-wrap max-w-full">
           <div className="flex max-w-2/3 items-center justify-center">
             <div className="rounded shadow">
               <Image

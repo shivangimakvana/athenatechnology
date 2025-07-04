@@ -117,7 +117,7 @@ export default function ProductTabs() {
             >
               {p.label}
               {active === idx && (
-                <span className="absolute left-1/2 -bottom-3 -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-b-8 border-l-transparent border-r-transparent border-b-[#ef8013] mt-[35px]" />
+                <span className="absolute top-full left-1/2 mx-auto w-0 h-0 border-t-[14px] border-t-[#ef8013] border-r-[13px] border-r-transparent border-l-[13px] border-l-transparent text-center block content-['']" />
               )}
             </button>
           </li>

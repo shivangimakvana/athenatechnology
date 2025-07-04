@@ -38,8 +38,7 @@ function CounterBox({ title, label, target, suffix = '+', duration }: CounterBox
       <div className="py-[30px] m-[10px] flex items-center ml-[30px] transition-all duration-200 ease-in-out">
 
         <div className="counter bg-[#1D4783] text-[50px] block h-[165px] w-[165px] leading-[165px] text-white pl-[35px] rounded-full">
-          <i className="flaticon flaticon-presentation"></i>
-          <p>fghfgh</p>
+          <i className="flaticon flaticon-presentation -ml-[60px]">icon</i>
         </div>
         <div className="counter ml-[-100px] px-[30px] pt-[10px] pb-[10px]  rounded-[6px] min-h-[236px]  flex flex-col justify-center transition-all duration-200 ease-in-out bg-[#1e303e] border border-[rgba(255,255,255,0.1)]">
           <span className='mb-[30px]'>{title}</span>
