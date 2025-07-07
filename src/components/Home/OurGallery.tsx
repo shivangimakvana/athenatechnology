@@ -39,57 +39,55 @@ export default function GallerySection() {
       </div>
       <div className="max-w-[1200px] mx-auto px-4">
         <div className="flex flex-wrap gap-8 justify-center">
-  {galleryItems.map((item, index) => (
-    <div
-      key={index}
-      className="relative flex group overflow-hidden shadow-md rounded-lg w-[370px] h-[270px]"
-    >
-      <img
-        src={item.img}
-        alt={item.title}
-        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-      />
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-[#223645]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0" />
-      {/* Content above overlay */}
-      <div className="absolute inset-0 flex flex-col justify-center items-center z-10">
-        <h3 className="text-white text-2xl font-bold text-center px-2 mb-4">
-          {item.title}
-        </h3>
-        <div className="flex gap-4">
-          <a
-            href={item.img}
-            className="text-white text-xl hover:text-gray-300 bg-[#223645] rounded-full p-3"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="fa fa-search"></i>
-          </a>
-          <a
-            href={item.link}
-            className="text-white text-xl hover:text-gray-300 bg-[#223645] rounded-full p-3"
-          >
-            <i className="fa fa-expand"></i>
-          </a>
+          {galleryItems.map((item, index) => (
+            <div
+              key={index}
+              className="relative flex group overflow-hidden shadow-md w-[370px] h-[270px]"
+            >
+              <img
+                src={item.img}
+                alt={item.title}
+                className="w-full h-full object-cover"
+              />
+              {/* Content above overlay */}
+              <div className="absolute inset-0 bg-[#223645]/80 opacity-0 w-[370px] h-[270px] group-hover:opacity-100 flex flex-col  items-center z-10">
+                <h3 className="text-[#fff] text-2xl font-bold text-center px-2 mb-4">
+                  {item.title}
+                </h3>
+                <div className="flex gap-4">
+                  <a
+                    href={item.img}
+                    className="text-[#fff] text-xl hover:text-gray-300 bg-[#223645] rounded-full p-3"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i className="fa fa-search">icon</i>
+                  </a>
+                  <a
+                    href={item.link}
+                    className="text-[#fff] text-xl hover:text-gray-300 bg-[#223645] rounded-full p-3"
+                  >
+                    <i className="fa fa-expand">icon</i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
-      </div>
-    </div>
-  ))}
-</div>
         <div className='text-center'>
-                        <div className="relative flex items-center justify-center gap-4">
-                            <div className="md:block h-[1px] w-[30%] bg-[#e4e4e4] transition-all duration-300"></div>
+          <div className="relative flex items-center justify-center gap-4">
+            <div className="md:block h-[1px] w-[30%] bg-[#e4e4e4] transition-all duration-300"></div>
 
-                            <a href="gallery.html" className="no-underline relative z-10 mx-[20px]">
-                                <span className="inline-flex items-center justify-center h-[40px] w-[40px] border border-black rounded-full text-black text-xl font-bold hover:bg-gray-100 transition-all">
-                                    +
-                                </span>
-                            </a>
+            <a href="gallery.html" className="no-underline relative z-10 mx-[20px]">
+              <span className="inline-flex items-center justify-center h-[40px] w-[40px] border border-black rounded-full text-black text-xl font-bold hover:bg-gray-100 transition-all">
+                +
+              </span>
+            </a>
 
-                            <div className="md:block h-[1px] w-[30%] bg-[#e4e4e4] transition-all duration-300"></div>
-                        </div>
-                        <span>View More</span>
-                    </div>
+            <div className="md:block h-[1px] w-[30%] bg-[#e4e4e4] transition-all duration-300"></div>
+          </div>
+          <span>View More</span>
+        </div>
       </div>
     </section>
   );
