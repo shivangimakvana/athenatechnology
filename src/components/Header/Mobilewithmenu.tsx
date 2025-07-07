@@ -71,9 +71,10 @@ export default function NavMenu() {
                         item="Products"
                     >
                         {/* Desktop Mega Menu */}
-                        <div className="absolute top-full left-0 mt-2 p-4 bg-[#fff] dark:bg-black shadow-lg grid grid-cols-4 gap-x-8 gap-y-4 z-50 w-[750px]">
+                        <div className="w-max max-w-full left-1/2 -translate-x-1/2 absolute top-full mt-2 py-[20px] bg-[#fff] dark:bg-black shadow-lg grid grid-cols-4 gap-x-8 gap-y-4 z-50 border border-gray-200"
+                            style={{ minWidth: "900px" }}>
                             {products.map((column, colIndex) => (
-                                <div key={colIndex} className="flex flex-col gap-y-2">
+                                <div key={colIndex} className="flex flex-col gap-y-2 px-[15px]">
                                     {column.map((item) => (
                                         <HoveredLink key={item.href} href={item.href} className={hoverLinkClass} onClick={() => setActive(null)}>
                                             {item.name}
@@ -104,7 +105,7 @@ export default function NavMenu() {
 
             {/* Mobile Menu */}
             {isMobileMenuOpen && (
-                <div className="absolute top-full left-0 right-0 bg-white dark:bg-gray-800 md:hidden shadow-lg py-3 px-5 space-y-3 z-50 border-t border-gray-200 dark:border-gray-700">
+                <div className="absolute top-full left-0 right-0 bg-white dark:bg-gray-800 md:hidden shadow-lg space-y-3 z-50 border-t border-gray-200 dark:border-gray-700 py-[40px]">
                     <Link href={"/"} className="block py-2 text-gray-800 dark:text-white hover:text-[#ef8013]" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
                     <Link href={"/about"} className="block py-2 text-gray-800 dark:text-white hover:text-[#ef8013]" onClick={() => setIsMobileMenuOpen(false)}>About</Link>
                     <MenuItem
