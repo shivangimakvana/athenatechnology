@@ -37,7 +37,7 @@ export default function Header() {
                     </ul>
                 </div>
             </div>
-            <div className="sticky top-0 z-[1000] bg-white shadow w-full">
+            <div className="sticky top-0 z-[1000] max-w-[1200px] mx-auto  bg-white shadow w-full">
                 <div className="flex justify-between items-center py-4">
                     <a href="/" title="Athena Technology" rel="home">
                         <img src="/images/logo.png" alt="Athena Technology Logo" className="h-12" />
