@@ -128,7 +128,7 @@ export default function ProductTabs() {
           isImageLeft ? "" : "flex-row-reverse"
         }`}
       >
-        <div className="w-full max-w-[600px]">
+        <div className="w-full max-w-[600px] px-[10px]">
           <h2 className="text-2xl md:text-3xl font-bold text-[#223645]">{product.label}</h2>
           <p className="w-full break-words whitespace-normal text-[#6c7a89]">
             {product.description}

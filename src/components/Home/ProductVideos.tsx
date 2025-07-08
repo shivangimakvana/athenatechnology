@@ -37,9 +37,9 @@ export default function ProductVideos() {
                     {videoData.map((video, index) => (
                         <div
                             key={index}
-                            className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8 animate__animated animate__slower animate__slideInRight"
+                            className="md:w-1/2 lg:w-1/3 px-4 mb-8 animate__animated animate__slower animate__slideInRight"
                         >
-                            <div className="px-[20px] py-0 shadow-[0_2px_10px_0_rgba(43,52,59,0.2)] my-[20px] mx-auto mr-[15px]">
+                            <div className="px-[20px] pt-[10px] shadow-[0_2px_10px_0_rgba(43,52,59,0.2)] my-[20px] mx-auto mr-[15px]">
                                 <h3 className="text-2xl font-bold text-[#223645] text-center mb-4">
                                     <a href={video.link} className="no-underline text-[#223645]">
                                         {video.title}

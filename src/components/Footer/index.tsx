@@ -2,6 +2,22 @@
 
 import { Button } from "@/components/ui/button";
 
+const quickLinks = [
+  { name: "Home", href: "index" },
+  { name: "About", href: "about" },
+  { name: "Product", href: "product" },
+  { name: "Gallery", href: "gallery" },
+  { name: "Contact", href: "contact" },
+];
+
+const productLinks = [
+  { name: "Nitrogen Evaporator", href: "nitrogen_evaporator" },
+  { name: "Probe Sonicator", href: "probe_sonicator" },
+  { name: "Cylinder Regulators High Pressure", href: "cylinder_regulators_high_pressure" },
+  { name: "TurboVap Evaporator", href: "turbovap_evaporator" },
+  { name: "Hydrogen Gas Generator", href: "hydrogen_gas_generator" },
+];
+
 export default function Footer() {
   return (
     <footer
@@ -9,8 +25,7 @@ export default function Footer() {
       style={{ backgroundImage: "url('/images/footer-bg.jpg')" }}
     >
       <div className="max-w-[1200px] mx-auto flex flex-wrap gap-8 justify-between">
-        {/* Contact Us */}
-        <div className="flex-1 min-w-[220px] max-w-xs mb-8">
+        <div className="flex-1 min-w-[220px] max-w-xs pt-[55px] pb-[25px]">
           <h3 className="font-bold text-lg mb-2">Contact Us</h3>
           <div className="text-[#FFFFFFD9] text-sm leading-relaxed">
             <p>
@@ -25,7 +40,7 @@ export default function Footer() {
               technology.athena@gmail.com <br />
               info@athenatechnology.co.in
             </div>
-            <div className="mt-[2px] font-semibold">CONTACT NO</div>
+            <div className="font-semibold mt-[18px]">CONTACT NO</div>
             <div>
               97690 47445 / 88799 02481 <br />
               98214 88400 / 88795 53181 <br />
@@ -33,36 +48,16 @@ export default function Footer() {
             </div>
           </div>
         </div>
-
-        {/* Quick Links & Working Hours */}
-        <div className="flex-1 min-w-[180px] max-w-xs mb-8">
+        <div className="flex-1 min-w-[180px] max-w-xs mb-8 pt-[55px] pb-[25px]">
           <h3 className="font-bold text-lg mb-2">Quick Links</h3>
-          <ul className="space-y-1 text-sm list-none">
-            <li>
-              <a className="text-[#FFFFFFD9] hover:underline" href="index">
-                Home
-              </a>
-            </li>
-            <li>
-              <a className="text-[#FFFFFFD9] hover:underline" href="about">
-                About
-              </a>
-            </li>
-            <li>
-              <a className="text-[#FFFFFFD9] hover:underline" href="product">
-                Product
-              </a>
-            </li>
-            <li>
-              <a className="text-[#FFFFFFD9] hover:underline" href="gallery">
-                Gallery
-              </a>
-            </li>
-            <li>
-              <a className="text-[#FFFFFFD9] hover:underline" href="contact">
-                Contact
-              </a>
-            </li>
+          <ul className="space-y-1 text-sm list-none p-[0px]">
+            {quickLinks.map(link => (
+              <li className="pb-[12px]" key={link.href}>
+                <a className="text-[#FFFFFFD9] no-underline hover:underline" href={link.href}>
+                  {link.name}
+                </a>
+              </li>
+            ))}
           </ul>
           <h3 className="font-bold text-lg mt-6 mb-2">Working Hours</h3>
           <div className="text-sm">
@@ -71,46 +66,24 @@ export default function Footer() {
             <b>Sunday off</b>
           </div>
         </div>
-
-        {/* Product Links */}
-        <div className="flex-1 min-w-[180px] max-w-xs mb-8">
+        <div className="flex-1 min-w-[180px] max-w-xs mb-8 pt-[55px] pb-[25px]">
           <h3 className="font-bold text-lg mb-2">Product Links</h3>
-          <ul className="space-y-1 text-sm list-none">
-            <li>
-              <a className="text-[#FFFFFFD9] hover:underline" href="nitrogen_evaporator">
-                Nitrogen Evaporator
-              </a>
-            </li>
-            <li>
-              <a className="text-[#FFFFFFD9] hover:underline" href="probe_sonicator">
-                Probe Sonicator
-              </a>
-            </li>
-            <li>
-              <a className="text-[#FFFFFFD9] hover:underline" href="cylinder_regulators_high_pressure">
-                Cylinder Regulators High Pressure
-              </a>
-            </li>
-            <li>
-              <a className="text-[#FFFFFFD9] hover:underline" href="turbovap_evaporator">
-                TurboVap Evaporator
-              </a>
-            </li>
-            <li>
-              <a className="text-[#FFFFFFD9] hover:underline" href="hydrogen_gas_generator">
-                Hydrogen Gas Generator
-              </a>
-            </li>
+          <ul className="space-y-1 text-sm list-none p-[0px]">
+            {productLinks.map(link => (
+              <li className="pb-[12px]" key={link.href}>
+                <a className="text-[#FFFFFFD9] no-underline hover:underline" href={link.href}>
+                  {link.name}
+                </a>
+              </li>
+            ))}
           </ul>
           <a href="product" className="block mt-4">
-            <Button className="bg-[#223645] font-semibold px-[30px] py-[14px] rounded border-[3px] border-[#fff] hover:text-[#ef8013]">
+            <Button className="bg-[#223645] px-[30px] py-[14px] rounded border-[1px] border-[#fff] hover:text-[#ef8013] font-bold text-lg mb-2">
               VIEW MORE
             </Button>
           </a>
         </div>
-
-        {/* Location */}
-        <div className="flex-1 min-w-[220px] max-w-xs mb-8">
+        <div className="flex-1 min-w-[220px] max-w-xs mb-8 pt-[55px] pb-[25px]">
           <h3 className="font-bold text-lg mb-2">Location</h3>
           <div>
             <iframe
@@ -126,10 +99,9 @@ export default function Footer() {
           </div>
         </div>
       </div>
-
       {/* Bottom Footer */}
-      <div className="border-t border-white/20 mt-8 py-4">
-        <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center justify-between text-center gap-4">
+      <div className=" mt-8 py-4">
+        <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row gap-4 border-t border-[#ffffff14] py-[23px]">
           <div className="text-sm">
             © Athena Technology | Design and promoted by&nbsp;
             <a
