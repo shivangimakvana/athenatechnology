@@ -3,16 +3,17 @@
 import NavMenu from "./NavMenu";
 import MobilewithMenu from "@/components/Header/Mobilewithmenu";
 import React from "react";
+import EmailIcon from '@/components/EmailIcon';
 
 export default function Header() {
     return (
         <header className="sticky top-0 z-[1000] bg-gray-800 text-white p-4">
             <div className="bg-[#223645] h-[50px]">
                 <div className="max-w-[1200px] mx-auto flex items-center justify-between h-full px-4">
-                    <div className="flex border-r border-l border-[rgba(255,255,255,0.08)]">
-                        <i className="ti ti-email" />
+                    <div className="flex border-r border-l border-[rgba(255,255,255,0.08)] p-[12px]">
+                        <EmailIcon />
                         <a
-                            className="no-underline text-[#fff] p-[12px] text-sm hover:underline"
+                            className="no-underline text-[#fff] pl-[5px] text-sm hover:underline"
                             href="mailto:info@athenatechnology.co.in"
                         >
                             info@athenatechnology.co.in

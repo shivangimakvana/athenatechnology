@@ -9,16 +9,16 @@ type PageTitleProps = {
 export default function PageTitle({ title, backgroundImage, children }: PageTitleProps) {
   return (
     <div
-      className="w-full flex flex-col items-center justify-center py-16 md:py-20"
+      className="w-full flex flex-col items-center justify-center py-16 md:py-20 bg-[#223645]"
       style={
         backgroundImage
           ? {
-              backgroundImage: `url(${backgroundImage})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-              position: "relative",
-            }
+            backgroundImage: `url(${backgroundImage})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            position: "relative",
+          }
           : {}
       }
     >
