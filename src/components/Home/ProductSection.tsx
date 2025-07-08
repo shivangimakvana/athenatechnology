@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import NextArrowIcon from '@/components/NextArrowIcon';
 
 const products = [
   {
@@ -153,13 +154,12 @@ export default function ProductTabs() {
           />
           <a href="#" className="btn-inline ">
             <span className="margin_bottom0">
-                <i className="ti ti-angle-right margin_left0"></i>
-                <p>icon</p>
+                <NextArrowIcon />
             </span>
           </a>
         </div>
       </div>
-      <div className='text-center'>
+      <div className='text-center mt-[20px]'>
         <div className="relative flex items-center justify-center gap-4">
           <div className="md:block h-[1px] w-[30%] bg-[#e4e4e4] transition-all duration-300"></div>
           <a href="product.html" className="no-underline relative z-10 mx-[20px]">
