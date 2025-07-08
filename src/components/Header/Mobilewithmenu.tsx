@@ -105,9 +105,9 @@ export default function NavMenu() {
 
             {/* Mobile Menu */}
             {isMobileMenuOpen && (
-                <div className="absolute top-full left-0 right-0 bg-white dark:bg-gray-800 md:hidden shadow-lg space-y-3 z-50 border-t border-gray-200 dark:border-gray-700 py-[40px]">
-                    <Link href={"/"} className="block py-2 text-gray-800 dark:text-white hover:text-[#ef8013]" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
-                    <Link href={"/about"} className="block py-2 text-gray-800 dark:text-white hover:text-[#ef8013]" onClick={() => setIsMobileMenuOpen(false)}>About</Link>
+                <div className="absolute top-full left-0 right-0 bg-[#fff] dark:bg-gray-800 md:hidden shadow-lg space-y-3 z-50 border-t border-gray-200 dark:border-gray-700 py-[40px]">
+                    <Link href={"/"} className="block py-2 text-gray-800 dark:text-white hover:text-[#ef8013] text-[#223645]" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
+                    <Link href={"/about"} className="block py-2 text-gray-800 dark:text-white hover:text-[#ef8013] text-[#223645]" onClick={() => setIsMobileMenuOpen(false)}>About</Link>
                     <MenuItem
                         setActive={setActive}
                         active={active}
@@ -122,9 +122,9 @@ export default function NavMenu() {
                             ))}
                         </div>
                     </MenuItem>
-                    <Link href={"/gallery"} className="block py-2 text-gray-800 dark:text-white hover:text-[#ef8013]" onClick={() => setIsMobileMenuOpen(false)}>Gallery</Link>
-                    <Link href={"/credential"} className="block py-2 text-gray-800 dark:text-white hover:text-[#ef8013]" onClick={() => setIsMobileMenuOpen(false)}>Credential</Link>
-                    <Link href={"/contact"} className="block py-2 text-gray-800 dark:text-white hover:text-[#ef8013]" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
+                    <Link href={"/gallery"} className="block py-2 text-gray-800 dark:text-white hover:text-[#ef8013] text-[#223645]" onClick={() => setIsMobileMenuOpen(false)}>Gallery</Link>
+                    <Link href={"/credential"} className="block py-2 text-gray-800 dark:text-white hover:text-[#ef8013] text-[#223645]" onClick={() => setIsMobileMenuOpen(false)}>Credential</Link>
+                    <Link href={"/contact"} className="block py-2 text-gray-800 dark:text-white hover:text-[#ef8013] text-[#223645]" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
                 </div>
             )}
         </nav>

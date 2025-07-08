@@ -9,12 +9,10 @@ import ReviewSection from '@/components/Home/ReviewSection';
 import OurTeam from '@/components/Home/OurTeam';
 import GallerySection from '@/components/Home/OurGallery';
 import Counter from '@/components/Home/Counter';
-import Test from '@/components/Home/test';
 
 export default function HomePage() {
   return (
     <main>
-      {/* <Test /> */}
       <div className="site-main">
         <Slider />
         <Welcome />

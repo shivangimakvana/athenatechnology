@@ -73,7 +73,7 @@ export default function ReviewSection() {
                                 </div>
                                 {/* Name and Details */}
                                 <div className="flex items-center gap-4 mb-2">
-                                    <div className="w-14 h-14 rounded-full bg-gray-200 flex items-center justify-center text-2xl font-bold text-[#223645]">
+                                    <div className="w-14 h-14 rounded-full flex items-center justify-center text-2xl font-bold text-[#223645] m-[10px] bg-[#d7c9c2eb] px-[15px] py-[10px]">
                                         {r.avatar}
                                     </div>
                                     <div>
